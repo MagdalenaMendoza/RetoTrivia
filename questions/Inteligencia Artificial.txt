@@ -10,3 +10,21 @@ Un tipo de aprendizaje automático donde el modelo se entrena con datos etiqueta
 Un método para mejorar la eficiencia energética de los dispositivos
 Un algoritmo que permite supervisar la base de conocimiento 
 2
+¿Qué empresa desarrolló el asistente virtual conocido como Siri?
+Android
+Microsoft
+Apple
+Amazon
+3
+¿Cuál es el nombre del robot humanoide desarrollado por Softbank Robotics que puede reconocer emociones y mantener conversaciones?
+Atlas
+NAOS
+Asimo
+Pepper
+4
+¿Qué tipo de algoritmo de aprendizaje automático se utiliza para predecir si un correo electrónico es spam o no?
+Regresión logística
+Árboles de decisión
+K-means
+Clasificación Naive Bayes
+4

@@ -22,3 +22,9 @@ Incrementar la velocidad de la conexión a internet
 Distribuir el tráfico de red entre varios servidores para asegurar la eficiencia y fiabilidad
 Monitorizar el tráfico de la red
 3
+¿Qué significa la sigla "VPN" en el contexto de redes?
+Virtual Personal Network
+Virtual Proxy Network
+Virtual Private Network
+Very Private Network
+3

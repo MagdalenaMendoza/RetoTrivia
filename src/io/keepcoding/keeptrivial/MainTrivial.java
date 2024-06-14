@@ -40,7 +40,7 @@ public class MainTrivial {
 		}
 		
 		String ganador = "Sin ganador.";
-		
+		int topic_number = getRandomInt(questions.size());
 		Scanner input = new Scanner (System.in);
 		boolean exit = false;
 		do {
@@ -49,7 +49,7 @@ public class MainTrivial {
 				
 				title("Ahora es el turno del equipo "+my_teams.getTeam(i).getName());
 				// Mostrar preguntas
-				int topic_number = getRandomInt(questions.size());
+				
 				if (questions.get(topic_number).length()==0){
 					questions.remove(topic_number);
 				}
@@ -98,7 +98,10 @@ public class MainTrivial {
 			}
 
 			
-			
+			topic_number ++;
+			if (topic_number >= questions.size()) {
+				topic_number = 0;
+			}
 		} while(!exit);
 		System.out.println();
 		title("Ha ganado: " + ganador);
