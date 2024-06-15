@@ -50,10 +50,20 @@ public class MainTrivial {
 				title("Ahora es el turno del equipo "+my_teams.getTeam(i).getName());
 				// Mostrar preguntas
 				
+				try {
+					questions.get(topic_number);
+				} catch (IndexOutOfBoundsException e) {
+					ganador= "sin ganador.";
+					exit=true;
+					break;
+					
+				}
 				if (questions.get(topic_number).length()==0){
 					questions.remove(topic_number);
+					topic_number = getRandomInt(questions.size());
 				}
 				int question_number = getRandomInt((questions.get(topic_number)).length());
+				System.out.println(question_number + " "+topic_number);
 				System.out.println(questions.get(topic_number).getName()+"\n");
 				question my_question = questions.get(topic_number).getQuestion(question_number);
 				System.out.println(my_question.ShowInfo()+"\n");
@@ -65,8 +75,6 @@ public class MainTrivial {
 					System.out.println("Ingrese una respuesta válida:");
 					answer = input.nextLine();
 				}
-				
-				
 				
 				if (Integer.valueOf(answer).equals(my_question.getCorrect_answer())) {
 					// Mostrar resultado
@@ -93,15 +101,26 @@ public class MainTrivial {
 					System.out.println(my_teams.getTeam(j).toStringPuntaje());
 				}
 				
-				
-				
 			}
-
+			try {
+				questions.remove(topic_number);
+			} catch (IndexOutOfBoundsException e) {
+				ganador= "sin ganador.";
+				exit=true;
+			}
 			
 			topic_number ++;
-			if (topic_number >= questions.size()) {
-				topic_number = 0;
-			}
+			
+			
+				if (topic_number >= questions.size()) {
+					topic_number = 0;
+				}
+		
+			
+			
+		
+			
+			
 		} while(!exit);
 		System.out.println();
 		title("Ha ganado: " + ganador);
